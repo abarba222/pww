@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="footerStyles">
             <div className="footer-column">
                 <h2 className="footer-title">South Carolina<br />Revenue and Fiscal Affairs Office</h2>
-                <img className="footer-image" src="assets/Group 262.png" alt="Revenue and Fiscal Affairs Office Logo"/>
+                <img className="footer-image" src="./../public/assets/Group 262.png" alt="Revenue and Fiscal Affairs Office Logo"/>
             </div>
             <div className="footer-column">
                 <ul className="footer-link-list">
