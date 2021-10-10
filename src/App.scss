@@ -267,6 +267,9 @@ $breakpoint-phone: 540px;
           border: 2px solid #fff;
           font-family: inherit;
           text-decoration: none;
+          &:hover {
+            cursor: pointer;
+          }
         }
       }
     }

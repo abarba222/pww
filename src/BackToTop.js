@@ -11,7 +11,7 @@ export default function BackToTop() {
     };
     return (
         <div className="backToTopStyles">
-            <button className="backToTopContainer" onClick={scrollToTop}>
+            <button className="backToTopContainer" onClick={scrollToTop} aria-label="Back to Top">
                 <label className="backToTop">Back to Top</label>
                 <span className="btt-icon-container"><FontAwesomeIcon icon={faChevronUp} className="btt-icon"></FontAwesomeIcon></span>
             </button>
