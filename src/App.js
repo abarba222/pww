@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect} from 'react';
+import WebFont from 'webfontloader';
+import Header from './Header';
+import Search from './Search';
+import Icons from './Icons';
+import Services from './Services';
+import UpdatesAndCalendar from './UpdatesAndCalendar';
+import News from './News';
+import Footer from './Footer';
+import './App.scss';
+import BackToTop from './BackToTop';
 
 function App() {
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ['Open Sans', 'Roboto Slab, Roboto Condensed'],
+      }
+    });
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Search />
+      <Icons />
+      <Services />
+      <UpdatesAndCalendar />
+      <BackToTop />
+      <News />
+      <Footer />
+    </> 
   );
 }
 

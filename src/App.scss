@@ -1,0 +1,739 @@
+$breakpoint-desktop-large: 1220px;
+$breakpoint-desktop-small: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-phone: 540px;
+
+//Styles for the Header section
+
+.headerStyles {
+  height: auto;
+  position: fixed;
+  .fixed-container {
+    width: 100%;
+    position: fixed;
+    background: #fff;
+    top: 0;
+    border-bottom: 4px solid #1b3a61;
+    height: 120px;
+    @media (max-width: $breakpoint-phone) {
+      height: 62px;
+    }
+    .menu-container {
+      display: inline-block;
+      .menu-dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        border: 1px solid rgba(0, 0, 0, 0.04);
+        box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        background-color: #fff;
+        border-bottom: 4px solid #1b3a61;
+        transition: 5s;
+        @media (max-width: $breakpoint-phone) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+        .nav-column-container {
+          @media (max-width: $breakpoint-phone) {
+            padding: 10px;
+            overflow: auto;
+          }
+          &.main-nav {
+            background-color: #e1e5ea;
+            @media (max-width: $breakpoint-phone) {
+              padding: 0;
+            }
+          }
+          a {
+            text-decoration: none;
+          }
+          .column-titles {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #1b3a61 !important;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+              cursor: pointer;
+            }
+            &::after {
+              display: block;
+              width: 50px;
+              height: 3px;
+              margin-top: 20px;
+              content: "";
+              background-color: #8c6910;
+              margin-bottom: 10px;
+            }
+          }
+          .nav-column {
+            list-style: none;
+            padding-left: 0;
+            &.main-nav-column {
+              padding: 0 30px;
+            }
+            .nav-tabs {
+              display: block;
+              margin-bottom: 0;
+              padding: .35rem 15px;
+              text-decoration: none;
+              letter-spacing: 0;
+              text-transform: none;
+              font-weight: 400;
+              text-align: left;
+              padding-left: 0;
+              &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+              }
+              a {
+                color: #333;
+              }
+              &.main-nav-items {
+                display: block;
+                padding: .875rem;
+                text-decoration: none;
+                border-bottom: 1px solid #ccc;
+                font-size: 15px;
+                font-weight: 700;
+                line-height: 22px;
+                text-align: center;
+                &:hover {
+                  text-decoration: underline;
+                  cursor: pointer;
+                }
+                a {
+                  color: #333;
+                }
+                &:last-child {
+                  border-bottom: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      .menu-button {
+        background-color: #3068ad;
+        color: #fff;
+        padding: 22px 15px;
+        border: 0;
+        @media (max-width: $breakpoint-phone) {
+          padding: 5px;
+        }
+        &:hover {
+          cursor: pointer;
+        }
+        .menu-text {
+          width: 37px;
+          letter-spacing: 2.5px;
+          text-transform: uppercase;
+          @media (max-width: $breakpoint-phone) {
+            font-size: 8px;
+            letter-spacing: 1px;
+          }
+          &.close {
+            font-size: 12px;
+            letter-spacing: 1.7px;
+            @media (max-width: $breakpoint-phone) {
+              font-size: 8px;
+              letter-spacing: 1px;
+            }
+          }
+        }
+        .menu-icon {
+          display: block;
+          font-size: 56px;
+          margin-bottom: 5px;
+          @media (max-width: $breakpoint-phone) {
+            font-size: 32px;
+          }
+          &.close {
+            margin: 0 auto;
+            margin-bottom: 5px;
+            @media (max-width: $breakpoint-phone) {
+              font-size: 32px;
+            }
+          }
+        }
+      }
+    }
+    .header-icon {
+      max-width: 100px;
+      vertical-align: top;
+      padding: 10px 15px;
+      @media (max-width: $breakpoint-phone) {
+        max-width: 48px;
+        padding: 7px 10px;
+      }
+    }
+    .site-name {
+      font-size: 18px;
+      display: inline-block;
+      vertical-align: super;
+      letter-spacing: .5px;
+      color: #1b3a61;
+      font-family: Roboto Slab;
+      font-weight: 700;
+      @media (max-width: $breakpoint-phone) {
+        font-size: 10px;
+      }
+      .site-slogan {
+        font-size: 12px;
+        opacity: .75;
+        color: #1b3a61;
+        font-family: Roboto Condensed,Open Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+        font-style: italic;
+        display: block;
+        @media (max-width: $breakpoint-phone) {
+          font-size: 5px;
+        }
+      }
+    }
+    .header-link-box {
+      float: right;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 120px;
+      position: relative;
+      @media (max-width: $breakpoint-phone) {
+        display: none;
+      }
+      .header-links {
+        color: #1b3a61;
+        font-size: .875rem;
+        padding: 0px 20px;
+        text-decoration: none;
+        vertical-align: bottom;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+        @media (max-width: $breakpoint-desktop-large) {
+          display: none;
+        }
+      }
+      .search-button {
+        background-color: transparent;
+        border: 0;
+      }
+      .header-search {
+        padding: .75rem;
+        border: 1px solid #3068ad;
+        border-radius: 2px;
+        margin-right: 15px;
+        width: 1.5rem;
+        height: 1.5rem;
+        color: #3068ad;
+        &:hover {
+          cursor: pointer;
+        }
+        &.search-close {
+          background-color: #0074c1;
+          color: #fff;
+        }
+      }
+      .search-dropdown {
+        position: absolute;
+        z-index: 1000;
+        top: 83px;
+        right: 21px;
+        width: 100%;
+        background: #0074c1;
+        @media (max-width: $breakpoint-desktop-large) {
+          width: 400px;
+        }
+        .search-input {
+          font-size: 16px;
+          padding: 10px;
+          margin: 10px;
+          width: 65%;
+          @media (max-width: $breakpoint-desktop-large) {
+            width: 230px;
+          }
+        }
+        .search-button-action {
+          padding: .75rem 1.5625rem;
+          letter-spacing: 1px;
+          font-weight: 600;
+          color: #fff;
+          background-color: #0074c1;
+          border: 2px solid #fff;
+          font-family: inherit;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+//Styles for the Search rfa.sc.gov section
+
+.searchStyles {
+  background-image: url("./images/shutterstock_42474535.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 386px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+  @media (max-width: $breakpoint-phone) {
+    margin-top: 66px;
+  }
+  .search-content {
+    text-align: center;
+    max-width: 650px;
+    padding: 0px 20px;
+    @media (max-width: $breakpoint-phone) {
+      padding-bottom: 30px;
+    }
+    .search-text {
+      display: block;
+      color: #fff;
+      font-size: 1.75em;
+      font-weight: 400;
+      line-height: 36px;
+    }
+    .search-input-section {
+      .search-input {
+        width: 400px;
+        margin-right: 15px;
+        margin-bottom: 10px;
+        padding: .75rem 1rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.375;
+        color: #000;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        @media (max-width: $breakpoint-phone) {
+          width: 90%;
+          margin: 0 auto;
+          margin-bottom: 10px;
+          margin-right: 0;
+        }
+      }
+      .search-apply {
+        padding: .75rem 1.5625rem;
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: #fff;
+        background-color: #0074c1;
+        border-color: #0074c1;
+        font-family: inherit;
+        &:hover {
+          color: #fff;
+          background-color: #005d9b;
+          border-color: #00558e;
+          cursor: pointer;
+        }
+      }
+      .search-icon {
+        display: inline-block;
+        color: #fff;
+        margin-left: 7px;
+      }
+    }
+  }
+}
+
+//Styles for the Navigation Icons section
+
+.iconStyles {
+  padding: 30px 6rem;
+  background-color: #e1e5ea;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  @media (max-width: $breakpoint-desktop-small) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: $breakpoint-phone) {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10px;
+  }
+  .icons {
+    text-align: center;
+    display: inline-block;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px 0 #c3c3c3;
+    vertical-align: top;
+    border: 2px solid transparent;
+    &:hover {
+      border: 2px solid #3068ad;
+      cursor: pointer;
+    }
+    @media (max-width: $breakpoint-desktop-large) {
+      padding: 15px;
+    }
+    .icon-image {
+      width: 114px;
+      height: 99px;
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 30px;
+      @media (max-width: $breakpoint-desktop-large) {
+        width: 57px;
+        height: 50px;
+      }
+    }
+    .icon-label-container {
+      width: 196px;
+      min-height: 54px;
+      margin: 0 auto;
+      @media (max-width: $breakpoint-desktop-large) {
+        width: 98px;
+      }
+      .icon-label {
+        letter-spacing: 1px;
+        color: #1b3a61;
+      }
+    }
+  }
+}
+
+//Styles for the Popular Services and Links section
+
+.servicesSyles {
+  padding: 30px 6rem;
+  @media (max-width: $breakpoint-phone) {
+    padding: 10px;
+  }
+  .services-title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1b3a61;
+    padding-bottom: 20px;
+    border-bottom: 10px solid #1b3a61;
+  }
+  .link-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    @media (max-width: $breakpoint-phone) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 0;
+    }
+    .links-column {
+      margin: 20px 0;
+      @media (max-width: $breakpoint-phone) {
+        margin: 0;
+      }
+      .service-link {
+        display: block;
+        padding-bottom: 30px;
+        color: #0074c1;
+        font-size: 18px;
+        text-decoration: underline;
+        &:hover {
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+//Styles for the Updates and Calendar section
+
+.updatesAndCalendarStyles {
+  padding: 30px 6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  @media (max-width: $breakpoint-phone) {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10px;
+  }
+}
+
+//Styles for the Recent Updates section
+
+.updatesStyles {
+  grid-column: 1;
+  @media (max-width: $breakpoint-phone) {
+    grid-column: auto;
+  }
+  .updates-title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1b3a61;
+    &::after {
+      display: block;
+      width: 50px;
+      height: 3px;
+      margin-top: 20px;
+      content: "";
+      background-color: #8c6910;
+      margin-bottom: 30px;
+    }
+  }
+  .updates {
+    margin-bottom: 30px;
+    .update-link {
+      font-size: 18px;
+      color: #0074c1;
+    }
+    .update-text {
+      margin-top: 10px;
+    }
+    .updates-published-section {
+      margin-top: 10px;
+      .updates-published {
+        font-size: 14px;
+      }
+      .publication-status {
+        font-size: 14px;
+        margin-left: 10px;
+        background-color: #666666;
+        color: #fff;
+        border-radius: 2px;
+        padding: 3px;
+      }
+    }
+  }
+  .view-more {
+      padding: .75rem 1.5625rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+      color: #fff;
+      background-color: #0074c1;
+      border-color: #0074c1;
+      font-family: inherit;
+      text-decoration: none;
+      &:hover {
+        color: #fff;
+        background-color: #005d9b;
+        border-color: #00558e;
+        cursor: pointer;
+    }
+  }
+}
+
+//Styles for the Calendar of Events section
+
+.eventsStyles {
+  grid-column: 2;
+  @media (max-width: $breakpoint-phone) {
+    grid-column: auto;
+  }
+  .events-title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1b3a61;
+    &::after {
+      display: block;
+      width: 50px;
+      height: 3px;
+      margin-top: 20px;
+      content: "";
+      background-color: #8c6910;
+      margin-bottom: 30px;
+    }
+  }
+  .events {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #c3c3c3;
+    &.last {
+      border-bottom: none;
+    }
+    .event-date-month {
+      display: inline-block;
+      padding: 5px 10px;
+      text-align: center;
+      color: #fff;
+      background: #8c6910;
+      font-size: 16px;
+      vertical-align: top;
+      margin-right: 20px;
+      margin-bottom: 10px;
+      .event-day {
+        font-size: 30px
+      }
+    }
+    .meeting-details {
+      display: inline-block;
+      .event-status {
+        margin: 0 0 10px 0;
+        font-size: 12px;
+        border-radius: 2px;
+        padding: 3px;
+        width: fit-content;
+        &.updated {
+          color: #333333;
+          background-color: #d2b859;
+        }
+        &.cancelled {
+          color: #fff;
+          background-color: #e9261d;
+        }
+      }
+      .event-meeting {
+        font-size: 18px;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 10px;
+      }
+      .event-time,
+      .event-location,
+      .event-phone {
+        display: block;
+        margin-bottom: 10px;
+        .event-time-icon,
+        .event-location-icon,
+        .event-phone-icon {
+          margin-right: 10px;
+          color: #8c6910;
+        }
+      }
+    }
+  }
+  .view-all-events {
+    padding: .75rem 1.5625rem;
+      letter-spacing: 1px;
+      font-weight: 600;
+      color: #fff;
+      background-color: #0074c1;
+      border-color: #0074c1;
+      font-family: inherit;
+      text-decoration: none;
+      &:hover {
+        color: #fff;
+        background-color: #005d9b;
+        border-color: #00558e;
+        cursor: pointer;
+    }
+  }
+}
+
+//Styles for the Back To Top section
+
+.backToTopStyles {
+  padding: 30px 6rem;
+  display: block;
+  margin-bottom: 50px;
+  @media (max-width: $breakpoint-phone) {
+    margin-top: 20px;
+    padding: 10px;
+  }
+  .backToTopContainer {
+    float: right;
+    background: transparent;
+    border: 0;
+    &:hover {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .backToTop {
+      color: #0074c1;
+      text-decoration: none;
+      font-size: 16px;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+    .btt-icon-container {
+      padding: 10px;
+      margin-left: 8px;
+      vertical-align: middle;
+      border-radius: 50%;
+      background: rgba(0,116,193,.25);
+      .btt-icon {
+        color: #0074c1;
+      }
+    }
+  }
+}
+ 
+//Styles for the Footer section
+
+.footerStyles {
+  padding: 30px 6rem;
+  color: #fff;
+  background-color: #1b3a61;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  @media (max-width: $breakpoint-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: $breakpoint-phone) {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10px;
+  }
+  .footer-column {
+    display: inline-block;
+    padding: 0 10px;
+    vertical-align: top;
+    .footer-title {
+      margin: 0 0 30px 0;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .footer-image {
+      width: 135px;
+    }
+    .footer-link-list {
+      margin: 0;
+      padding: 0;
+      @media (max-width: $breakpoint-tablet) {
+        border-left: 2px solid #fff;
+      }
+      @media (max-width: $breakpoint-phone) {
+        border-left: none;
+      }
+      .footer-links {
+        list-style-type: none;
+        padding: .5rem 1rem;
+        @media (max-width: $breakpoint-phone) {
+          padding-left: 0;
+        }
+        .footer-link {
+          text-decoration: none;
+          color: #fff; 
+          font-size: 1rem;
+          font-weight: 700;
+          &:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    .addresses {
+      margin-bottom: 20px;
+      .address-title {
+        margin-bottom: 10px;
+        margin-top: 0;
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: #93a4bd;
+        font-weight: 700;
+        line-height: 1.375;
+      }
+      .address {
+        font-size: 14px;
+        margin: 0;
+      }
+    }
+  }
+}
