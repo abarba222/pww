@@ -10,25 +10,22 @@ export default function Footer() {
             <div className="footer-column">
                 <ul className="footer-link-list">
                     <li className="footer-links">
-                        <a href="" className="footer-link">Privacy Statement</a>
+                        <a href="/" className="footer-link">Privacy Statement</a>
                     </li>
                     <li className="footer-links">
-                        <a href="" className="footer-link">FOIA</a>
+                        <a href="/" className="footer-link">FOIA</a>
                     </li>
                     <li className="footer-links">
-                        <a href="" className="footer-link">Disclosures and Reporting</a>
+                        <a href="/" className="footer-link">Disclosures and Reporting</a>
                     </li>
                     <li className="footer-links">
-                        <a href="" className="footer-link">Report Fraud</a>
+                        <a href="/" className="footer-link">Report Fraud</a>
                     </li>
                     <li className="footer-links">
-                        <a href="" className="footer-link">Accessibility</a>
+                        <a href="/" className="footer-link">Accessibility</a>
                     </li>
                     <li className="footer-links">
-                        <a href="" className="footer-link">Contact Us</a>
-                    </li>
-                    <li className="footer-links">
-                        <a href="" className="footer-link"></a>
+                        <a href="/" className="footer-link">Contact Us</a>
                     </li>
                 </ul>
             </div>

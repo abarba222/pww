@@ -4,19 +4,19 @@ export default function Icons() {
     return (
         <div className="iconStyles">
             <a href="/" className="icons">
-                <img className="icon-image" src="assets/Data-Research-Icon.svg" />
+                <img className="icon-image" src="assets/Data-Research-Icon.svg" alt="Data Research Icon"/>
                 <div className="icon-label-container"><label className="icon-label">DATA & RESEARCH</label></div>
             </a>
             <a href="/" className="icons">
-                <img className="icon-image" src="assets/Geography-Icon.svg" />
+                <img className="icon-image" src="assets/Geography-Icon.svg" alt="Geography Icon" />
                 <div className="icon-label-container"><label className="icon-label">GEOGRAPHY & MAPPING</label></div>
             </a>
             <a href="/" className="icons">
-                <img className="icon-image" src="assets/Programs-Icon.svg" />
+                <img className="icon-image" src="assets/Programs-Icon.svg" alt="Programs Icon"/>
                 <div className="icon-label-container"><label className="icon-label">PROGRAMS & SERVICES</label></div>
             </a>
             <a href="/" className="icons">
-                <img className="icon-image" src="assets/Legislative-Icon.svg" />
+                <img className="icon-image" src="assets/Legislative-Icon.svg" alt="Legislatie Icon"/>
                 <div className="icon-label-container"><span className="icon-label">LEGISLATIVE FISCAL IMPACTS</span></div>
             </a>
         </div>

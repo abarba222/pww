@@ -1,4 +1,4 @@
-import React, { useState, Component } from 'react'
+import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faTimes, faSearch } from '@fortawesome/free-solid-svg-icons'
 
@@ -81,7 +81,7 @@ export default function Header() {
                         </div>
                     )}
                 </div>
-                <img src="assets/RFA Logo Final.png" alt="" className="header-icon"/>
+                <img src="assets/RFA Logo Final.png" alt="RFA Logo" className="header-icon"/>
                 <h1 className="site-name">South Carolina <br/>Revenue And Fiscal Affairs Office<span className="site-slogan">Transforming data into solutions for South Carolina</span></h1>
                 <div className="header-link-box">
                     <a href="https://rfa.sc.gov/about" className="header-links">ABOUT US</a>
